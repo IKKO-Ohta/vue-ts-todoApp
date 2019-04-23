@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="ToDo">
-      <img class="Logo" src="./assets/logo.png" alt="Vue logo">
+      <img class="Logo" src="./assets/vtCut.png" alt="Vue logo">
       <h1 class="ToDo-Header">Vue-TS To Do</h1>
       <div class="ToDo-Container">
         <div class="ToDo-Content">
@@ -71,9 +71,9 @@ body {
 }
 
 .Logo {
-  width: 50px;
+  width: 400px;
+  padding: 10px;
   position: relative;
-  top: 50px;
 }
 
 .ToDo {
@@ -93,7 +93,7 @@ body {
     Arial, sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  margin: 70px auto 30px;
+  margin: 30px auto 30px;
 }
 
 .ToDo-Add {
