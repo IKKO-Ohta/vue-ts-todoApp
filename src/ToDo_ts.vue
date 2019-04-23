@@ -35,7 +35,7 @@ export default class ToDo extends Vue {
     },
     {
       id: 2,
-      text: "buy chocolate"
+      text: "buy chocolates"
     }
   ];
   @Prop() todo: string = "";
