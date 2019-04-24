@@ -19,7 +19,7 @@
 import ToDoItem from "./components/ToDoItem.vue";
 import { Vue, Component, Prop } from "vue-property-decorator"; //vue.ts official library
 
-interface a_todo {
+interface ATodo {
   id: number;
   text: string;
 }
@@ -28,7 +28,7 @@ interface a_todo {
   components: { ToDoItem }
 })
 export default class ToDo extends Vue {
-  @Prop() list: a_todo[] = [
+  @Prop() list: ATodo[] = [
     {
       id: 1,
       text: "clean the house"
@@ -45,13 +45,13 @@ export default class ToDo extends Vue {
       alert("Please enter a todo!");
       return;
     }
-    const newId = Math.max.apply(null, this.list.map((t: a_todo) => t.id)) + 1;
+    const newId = Math.max.apply(null, this.list.map((t: ATodo) => t.id)) + 1;
     this.list.push({ id: newId, text: this.todo });
     this.todo = "";
   }
 
-  onDeleteItem(todo: a_todo) {
-    this.list = this.list.filter((item: a_todo) => item !== todo);
+  onDeleteItem(todo: ATodo) {
+    this.list = this.list.filter((item: ATodo) => item !== todo);
   }
 }
 </script>
